@@ -1,11 +1,3 @@
-/**
-  * Rhinoslider 1.05
-  * http://rhinoslider.com/
-  *
-  * Copyright 2013: Sebastian Pontow, Rene Maas (http://renemaas.de/)
-  * Dual licensed under the MIT or GPL Version 2 licenses.
-  * http://rhinoslider.com/license/
-  */
 (function ($, window, undefined) {
 
 	$.extend($.easing, {
@@ -14,7 +6,7 @@
 			return -endValue * (currentTime /= totalTime) * (currentTime - 2) + startValue;
 		},
 		kick: function (none, currentTime, startValue, endValue, totalTime) {
-			if ((currentTime /= totalTime / 2) < 1) {
+			if ((currentTime /= totalTime / 1) < 1) {
 				return endValue / 2 * Math.pow(2, 10 * (currentTime - 1)) + startValue;
 			}
 			return endValue / 2 * (-Math.pow(2, -10 * --currentTime) + 2) + startValue;
@@ -605,7 +597,7 @@
 					});
 				vars.active
 					.css({
-						zIndex: 0,
+						zIndex: 1,
 						top: 0,
 						left: 0,
 						margin: 0,
